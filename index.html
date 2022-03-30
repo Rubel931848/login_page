@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <script src="https://kit.fontawesome.com/af00cacf96.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="" method="post">
+        <h2>Login </h2>
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Enter Name" id="">
+
+        <label for="password">Password</label>
+        <div class="pass_container">
+            <input type="password" name="password" placeholder="Enter Name" id="pass">
+            <i id="eye" class="fa-solid fa-eye-slash"></i>
+        </div>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+    let pass = document.querySelector("#pass");
+    let eye = document.querySelector("#eye");
+
+    eye.addEventListener("click",function(){
+        // pass.type="text";
+        if(pass.type==="password"){
+            pass.type="text";
+            eye.classList.replace("fa-eye-slash","fa-eye");
+        }else{
+            pass.type="password";
+            eye.classList.replace("fa-eye","fa-eye-slash");
+        }
+    });
+
+    </script>
+</body>
+</html>
